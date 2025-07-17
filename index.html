@@ -1,33 +1,96 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FelkantGames</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Felkant Games</title>
   <style>
     body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      text-align: center;
       margin: 0;
-      padding: 50px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 50px 20px;
     }
     h1 {
-      color: #00ffcc;
+      font-size: 42px;
+      margin-bottom: 10px;
     }
-    a {
-      color: #ffaa00;
+    p {
+      font-size: 18px;
+      color: #ccc;
+    }
+    .game-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 10px;
+    }
+    .game-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .game-card h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    .game-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .game-card p {
+      color: #bbb;
+    }
+    .game-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #00ffff;
       text-decoration: none;
+      font-weight: bold;
     }
-    a:hover {
+    .game-card a:hover {
       text-decoration: underline;
+    }
+    footer {
+      padding: 30px 10px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>👋 Merhaba, bu sayfa çalışıyor!</h1>
-  <p>Bu sayfa <strong>GitHub Pages</strong> ile yayınlandı.</p>
-  <p><a href="https://github.com/felkant" target="_blank">GitHub Profilime Git</a></p>
+
+  <header>
+    <h1>Felkant Games</h1>
+    <p>Fun, fast, and free indie mobile games!</p>
+  </header>
+
+  <section class="game-section">
+    <div class="game-card">
+      <div class="game-icon">🪐</div>
+      <h3>Nebula Bubble Adventure</h3>
+      <p>Pop colorful bubbles in space with a squirrel hero!</p>
+      <a href="https://play.google.com/store/apps/details?id=com.felkant.nebula" target="_blank">Play on Google Play</a>
+    </div>
+    
+    <div class="game-card">
+      <div class="game-icon">🐺</div>
+      <h3>Snow Escape</h3>
+      <p>Escape from icy mountains as a wild wolf! Coming soon.</p>
+      <a href="#">Coming Soon</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Felkant Games. All rights reserved.
+  </footer>
+
 </body>
 </html>
