@@ -1,5 +1,4 @@
 
----
 
 <!DOCTYPE html>
 <html lang="tr">
@@ -13,17 +12,35 @@
       background: linear-gradient(135deg, #4c6ef5, #b197fc);
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 40px 20px;
     }
     h1 {
       font-size: 2.5em;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 40px;
+      font-size: 1.8em;
+    }
+    p {
+      max-width: 800px;
+      margin: 10px auto 30px;
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+    .section {
+      padding: 40px 20px;
     }
     .games {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      margin-top: 20px;
     }
     .game-card {
       background: rgba(255, 255, 255, 0.1);
@@ -36,34 +53,124 @@
       transform: scale(1.05);
       background: rgba(255, 255, 255, 0.2);
     }
+    .game-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
     .game-card a {
       text-decoration: none;
       color: white;
       font-size: 1.1em;
       font-weight: bold;
     }
+    .news {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+    }
+    .news-item {
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 10px;
+    }
+    footer {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .lang-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      color: #4c6ef5;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      cursor: pointer;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <h1>Felkant Games 🎮</h1>
-  <div class="games">
-    <div class="game-card">
-      <a href="https://play.google.com/store/apps/details?id=com.SUDOKUWORLD.FELKANTGAMES" target="_blank">Sudoku World</a>
+  <!-- Dil Seçeneği -->
+  <div class="lang-switch">🌐 TR | EN</div>
+
+  <!-- Başlık -->
+  <header>
+    <h1>Felkant Games 🎮</h1>
+    <p>Yenilikçi ve eğlenceli mobil oyunlarla oyunculara unutulmaz deneyimler sunuyoruz.</p>
+  </header>
+
+  <!-- Hakkımızda -->
+  <section class="section">
+    <h2>Hakkımızda</h2>
+    <p>
+      Felkant Games, mobil oyun dünyasında fark yaratmak amacıyla kurulmuş bir bağımsız oyun stüdyosudur. 
+      Amacımız basit ama etkileyici oyunlar geliştirerek dünya çapındaki oyunculara keyifli anlar yaşatmaktır.
+    </p>
+  </section>
+
+  <!-- Oyunlar -->
+  <section class="section">
+    <h2>Oyunlarımız</h2>
+    <div class="games">
+      <div class="game-card">
+        <img src="https://play-lh.googleusercontent.com/placeholder" alt="Sudoku World">
+        <a href="https://play.google.com/store/apps/details?id=com.SUDOKUWORLD.FELKANTGAMES" target="_blank">Sudoku World</a>
+      </div>
+      <div class="game-card">
+        <img src="https://play-lh.googleusercontent.com/placeholder" alt="Galaxy Match">
+        <a href="https://play.google.com/store/apps/details?id=com.galaxymatch.felkantgames" target="_blank">Galaxy Match</a>
+      </div>
+      <div class="game-card">
+        <img src="https://play-lh.googleusercontent.com/placeholder" alt="Nebula Bubble Adventure">
+        <a href="https://play.google.com/store/apps/details?id=com.felkantgames.nebulabubbleadventure" target="_blank">Nebula Bubble Adventure</a>
+      </div>
+      <div class="game-card">
+        <img src="https://play-lh.googleusercontent.com/placeholder" alt="The Royal Chess">
+        <a href="https://play.google.com/store/apps/details?id=com.TheRoyalChess" target="_blank">The Royal Chess</a>
+      </div>
+      <div class="game-card">
+        <img src="https://play-lh.googleusercontent.com/placeholder" alt="Happy Bunny">
+        <a href="https://play.google.com/store/apps/details?id=com.happybunny.felkant" target="_blank">Happy Bunny</a>
+      </div>
     </div>
-    <div class="game-card">
-      <a href="https://play.google.com/store/apps/details?id=com.galaxymatch.felkantgames" target="_blank">Galaxy Match</a>
+  </section>
+
+  <!-- Duyurular -->
+  <section class="section">
+    <h2>Duyurular</h2>
+    <div class="news">
+      <div class="news-item">🆕 <strong>Galaxy Match</strong> şimdi Google Play'de yayında!</div>
+      <div class="news-item">🛠️ Sudoku World'e yeni zorluk seviyesi eklendi.</div>
+      <div class="news-item">🚀 Yeni oyunlarımız yolda, bizi takipte kalın!</div>
     </div>
-    <div class="game-card">
-      <a href="https://play.google.com/store/apps/details?id=com.felkantgames.nebulabubbleadventure" target="_blank">Nebula Bubble Adventure</a>
-    </div>
-    <div class="game-card">
-      <a href="https://play.google.com/store/apps/details?id=com.TheRoyalChess" target="_blank">The Royal Chess</a>
-    </div>
-    <div class="game-card">
-      <a href="https://play.google.com/store/apps/details?id=com.happybunny.felkant" target="_blank">Happy Bunny</a>
-    </div>
-  </div>
+  </section>
+
+  <!-- İletişim -->
+  <section class="section">
+    <h2>İletişim</h2>
+    <p>📩 Bize ulaşın: <strong>felkantgames@gmail.com</strong></p>
+    <p>
+      Takipte kalın 👇<br/>
+      <a href="#" style="color:white;">Instagram</a> | 
+      <a href="#" style="color:white;">YouTube</a> | 
+      <a href="#" style="color:white;">X (Twitter)</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Felkant Games — Tüm Hakları Saklıdır.
+  </footer>
 </body>
 </html>
 
 
+--
