@@ -1,96 +1,92 @@
+Harika 👍
+Bu linklerle basit ama şık bir GitHub Pages sitesi oluşturabiliriz.
+Aşağıda, oyunlarınıza bağlantı içeren örnek bir index.html dosyası taslağı var 👇
+
+
+---
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Felkant Games</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4c6ef5, #b197fc);
       color: white;
       text-align: center;
-    }
-    header {
       padding: 50px 20px;
     }
     h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: 2.5em;
+      margin-bottom: 30px;
     }
-    p {
-      font-size: 18px;
-      color: #ccc;
-    }
-    .game-section {
+    .games {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      padding: 40px 10px;
     }
     .game-card {
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
       padding: 20px;
-      width: 280px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      width: 250px;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
-    .game-card h3 {
-      margin-top: 0;
-      font-size: 22px;
-    }
-    .game-icon {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    .game-card p {
-      color: #bbb;
+    .game-card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
     }
     .game-card a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #00ffff;
       text-decoration: none;
+      color: white;
+      font-size: 1.1em;
       font-weight: bold;
-    }
-    .game-card a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      padding: 30px 10px;
-      font-size: 14px;
-      color: #888;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Felkant Games</h1>
-    <p>Fun, fast, and free indie mobile games!</p>
-  </header>
-
-  <section class="game-section">
+  <h1>Felkant Games 🎮</h1>
+  <div class="games">
     <div class="game-card">
-      <div class="game-icon">🪐</div>
-      <h3>Nebula Bubble Adventure</h3>
-      <p>Pop colorful bubbles in space with a squirrel hero!</p>
-      <a href="https://play.google.com/store/apps/details?id=com.felkant.nebula" target="_blank">Play on Google Play</a>
+      <a href="https://play.google.com/store/apps/details?id=com.SUDOKUWORLD.FELKANTGAMES" target="_blank">Sudoku World</a>
     </div>
-    
     <div class="game-card">
-      <div class="game-icon">🐺</div>
-      <h3>Snow Escape</h3>
-      <p>Escape from icy mountains as a wild wolf! Coming soon.</p>
-      <a href="#">Coming Soon</a>
+      <a href="https://play.google.com/store/apps/details?id=com.galaxymatch.felkantgames" target="_blank">Galaxy Match</a>
     </div>
-  </section>
-
-  <footer>
-    © 2025 Felkant Games. All rights reserved.
-  </footer>
-
+    <div class="game-card">
+      <a href="https://play.google.com/store/apps/details?id=com.felkantgames.nebulabubbleadventure" target="_blank">Nebula Bubble Adventure</a>
+    </div>
+    <div class="game-card">
+      <a href="https://play.google.com/store/apps/details?id=com.TheRoyalChess" target="_blank">The Royal Chess</a>
+    </div>
+    <div class="game-card">
+      <a href="https://play.google.com/store/apps/details?id=com.happybunny.felkant" target="_blank">Happy Bunny</a>
+    </div>
+  </div>
 </body>
 </html>
+
+
+---
+
+💡 Kullanım adımları:
+
+1. GitHub üzerinde yeni bir repo oluştur (örneğin felkant-games).
+
+
+2. Bu kodu index.html adıyla repo’ya yükle.
+
+
+3. Settings → Pages sekmesinden main branch ve / (root) klasörünü seçerek Pages’ı aktif et.
+
+
+4. Site adresin https://kullaniciadiniz.github.io/felkant-games şeklinde olacaktır.
+
+
+
+İstersen sayfaya oyunların ikonlarını veya arka plan efektleri de ekleyebilirim. İster misin? 🎨✨
+
