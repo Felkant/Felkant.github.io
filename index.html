@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -95,82 +93,169 @@
       cursor: pointer;
       font-weight: bold;
     }
+    .lang-section {
+      display: none;
+    }
+    .lang-section.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <!-- Dil Seçeneği -->
-  <div class="lang-switch">🌐 TR | EN</div>
+  <!-- Dil Değiştirici -->
+  <div class="lang-switch" onclick="toggleLanguage()">🌐 TR | EN</div>
 
-  <!-- Başlık -->
-  <header>
-    <h1>Felkant Games 🎮</h1>
-    <p>Yenilikçi ve eğlenceli mobil oyunlarla oyunculara unutulmaz deneyimler sunuyoruz.</p>
-  </header>
+  <!-- Türkçe -->
+  <div id="lang-tr" class="lang-section active">
+    <header>
+      <h1>Felkant Games 🎮</h1>
+      <p>Yenilikçi ve eğlenceli mobil oyunlarla oyunculara unutulmaz deneyimler sunuyoruz.</p>
+    </header>
 
-  <!-- Hakkımızda -->
-  <section class="section">
-    <h2>Hakkımızda</h2>
-    <p>
-      Felkant Games, mobil oyun dünyasında fark yaratmak amacıyla kurulmuş bir bağımsız oyun stüdyosudur. 
-      Amacımız basit ama etkileyici oyunlar geliştirerek dünya çapındaki oyunculara keyifli anlar yaşatmaktır.
-    </p>
-  </section>
+    <section class="section">
+      <h2>Hakkımızda</h2>
+      <p>
+        Felkant Games, mobil oyun dünyasında fark yaratmak amacıyla kurulmuş bağımsız bir oyun stüdyosudur.
+        Basit ama etkileyici oyunlarla dünya çapındaki oyunculara keyifli anlar yaşatmayı hedefliyoruz.
+      </p>
+    </section>
 
-  <!-- Oyunlar -->
-  <section class="section">
-    <h2>Oyunlarımız</h2>
-    <div class="games">
-      <div class="game-card">
-        <img src="https://play-lh.googleusercontent.com/placeholder" alt="Sudoku World">
-        <a href="https://play.google.com/store/apps/details?id=com.SUDOKUWORLD.FELKANTGAMES" target="_blank">Sudoku World</a>
+    <section class="section">
+      <h2>Oyunlarımız</h2>
+      <div class="games">
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/placeholder" alt="Sudoku World">
+          <a href="https://play.google.com/store/apps/details?id=com.SUDOKUWORLD.FELKANTGAMES" target="_blank">Sudoku World</a>
+        </div>
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/placeholder" alt="Galaxy Match">
+          <a href="https://play.google.com/store/apps/details?id=com.galaxymatch.felkantgames" target="_blank">Galaxy Match</a>
+        </div>
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/placeholder" alt="Nebula Bubble Adventure">
+          <a href="https://play.google.com/store/apps/details?id=com.felkantgames.nebulabubbleadventure" target="_blank">Nebula Bubble Adventure</a>
+        </div>
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/placeholder" alt="The Royal Chess">
+          <a href="https://play.google.com/store/apps/details?id=com.TheRoyalChess" target="_blank">The Royal Chess</a>
+        </div>
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/placeholder" alt="Happy Bunny">
+          <a href="https://play.google.com/store/apps/details?id=com.happybunny.felkant" target="_blank">Happy Bunny</a>
+        </div>
       </div>
-      <div class="game-card">
-        <img src="https://play-lh.googleusercontent.com/placeholder" alt="Galaxy Match">
-        <a href="https://play.google.com/store/apps/details?id=com.galaxymatch.felkantgames" target="_blank">Galaxy Match</a>
-      </div>
-      <div class="game-card">
-        <img src="https://play-lh.googleusercontent.com/placeholder" alt="Nebula Bubble Adventure">
-        <a href="https://play.google.com/store/apps/details?id=com.felkantgames.nebulabubbleadventure" target="_blank">Nebula Bubble Adventure</a>
-      </div>
-      <div class="game-card">
-        <img src="https://play-lh.googleusercontent.com/placeholder" alt="The Royal Chess">
-        <a href="https://play.google.com/store/apps/details?id=com.TheRoyalChess" target="_blank">The Royal Chess</a>
-      </div>
-      <div class="game-card">
-        <img src="https://play-lh.googleusercontent.com/placeholder" alt="Happy Bunny">
-        <a href="https://play.google.com/store/apps/details?id=com.happybunny.felkant" target="_blank">Happy Bunny</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Duyurular -->
-  <section class="section">
-    <h2>Duyurular</h2>
-    <div class="news">
-      <div class="news-item">🆕 <strong>Galaxy Match</strong> şimdi Google Play'de yayında!</div>
-      <div class="news-item">🛠️ Sudoku World'e yeni zorluk seviyesi eklendi.</div>
-      <div class="news-item">🚀 Yeni oyunlarımız yolda, bizi takipte kalın!</div>
-    </div>
-  </section>
+    <section class="section">
+      <h2>Duyurular</h2>
+      <div class="news">
+        <div class="news-item">🆕 <strong>Galaxy Match</strong> şimdi Google Play'de yayında!</div>
+        <div class="news-item">🛠️ Sudoku World'e yeni zorluk seviyesi eklendi.</div>
+        <div class="news-item">🚀 Yeni oyunlarımız yolda, bizi takipte kalın!</div>
+      </div>
+    </section>
 
-  <!-- İletişim -->
-  <section class="section">
-    <h2>İletişim</h2>
-    <p>📩 Bize ulaşın: <strong>felkantgames@gmail.com</strong></p>
-    <p>
-      Takipte kalın 👇<br/>
-      <a href="#" style="color:white;">Instagram</a> | 
-      <a href="#" style="color:white;">YouTube</a> | 
-      <a href="#" style="color:white;">X (Twitter)</a>
-    </p>
-  </section>
+    <section class="section">
+      <h2>İletişim</h2>
+      <p>📩 Bize ulaşın: <strong>felkantgames@gmail.com</strong></p>
+      <p>
+        Takipte kalın 👇<br/>
+        <a href="#" style="color:white;">Instagram</a> |
+        <a href="#" style="color:white;">YouTube</a> |
+        <a href="#" style="color:white;">X (Twitter)</a>
+      </p>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 Felkant Games — Tüm Hakları Saklıdır.
-  </footer>
+    <footer>
+      © 2025 Felkant Games — Tüm Hakları Saklıdır.
+    </footer>
+  </div>
+
+  <!-- English -->
+  <div id="lang-en" class="lang-section">
+    <header>
+      <h1>Felkant Games 🎮</h1>
+      <p>Delivering unforgettable gaming experiences with innovative and fun mobile games.</p>
+    </header>
+
+    <section class="section">
+      <h2>About Us</h2>
+      <p>
+        Felkant Games is an independent mobile game studio built to bring creative, simple, and enjoyable games 
+        to players around the world. Our mission is to make gaming fun and accessible for everyone.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Our Games</h2>
+      <div class="games">
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/placeholder" alt="Sudoku World">
+          <a href="https://play.google.com/store/apps/details?id=com.SUDOKUWORLD.FELKANTGAMES" target="_blank">Sudoku World</a>
+        </div>
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/placeholder" alt="Galaxy Match">
+          <a href="https://play.google.com/store/apps/details?id=com.galaxymatch.felkantgames" target="_blank">Galaxy Match</a>
+        </div>
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/placeholder" alt="Nebula Bubble Adventure">
+          <a href="https://play.google.com/store/apps/details?id=com.felkantgames.nebulabubbleadventure" target="_blank">Nebula Bubble Adventure</a>
+        </div>
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/placeholder" alt="The Royal Chess">
+          <a href="https://play.google.com/store/apps/details?id=com.TheRoyalChess" target="_blank">The Royal Chess</a>
+        </div>
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/placeholder" alt="Happy Bunny">
+          <a href="https://play.google.com/store/apps/details?id=com.happybunny.felkant" target="_blank">Happy Bunny</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>News</h2>
+      <div class="news">
+        <div class="news-item">🆕 <strong>Galaxy Match</strong> is now available on Google Play!</div>
+        <div class="news-item">🛠️ New difficulty level added to Sudoku World.</div>
+        <div class="news-item">🚀 More games are on the way. Stay tuned!</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>📩 Get in touch: <strong>felkantgames@gmail.com</strong></p>
+      <p>
+        Follow us 👇<br/>
+        <a href="#" style="color:white;">Instagram</a> |
+        <a href="#" style="color:white;">YouTube</a> |
+        <a href="#" style="color:white;">X (Twitter)</a>
+      </p>
+    </section>
+
+    <footer>
+      © 2025 Felkant Games — All Rights Reserved.
+    </footer>
+  </div>
+
+  <script>
+    let currentLang = 'tr';
+    function toggleLanguage() {
+      const trSection = document.getElementById('lang-tr');
+      const enSection = document.getElementById('lang-en');
+      const switcher = document.querySelector('.lang-switch');
+
+      if (currentLang === 'tr') {
+        trSection.classList.remove('active');
+        enSection.classList.add('active');
+        currentLang = 'en';
+        switcher.textContent = '🌐 EN | TR';
+      } else {
+        enSection.classList.remove('active');
+        trSection.classList.add('active');
+        currentLang = 'tr';
+        switcher.textContent = '🌐 TR | EN';
+      }
+    }
+  </script>
 </body>
 </html>
-
-
---
