@@ -3,396 +3,260 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Felkant Games — Official</title>
-  <meta name="description" content="Felkant Games - Playful, animated and colorful casual games. Türkçe / English." />
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700;800&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+  <title>Felkant Games — Official Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg-dark: #071029;
-      --space-deep: linear-gradient(180deg,#071029 0%, #0b1a3a 50%, #081433 100%);
-      --accent1: #FF6F61;   /* coral */
-      --accent2: #7C5CFF;   /* purple */
-      --accent3: #FFD93D;   /* yellow */
-      --accent4: #6BCB77;   /* green */
-      --glass: rgba(255,255,255,0.06);
-      --card: rgba(255,255,255,0.04);
-      --text: #f6f8fb;
-      --muted: #b8c3d9;
-      --radius: 16px;
+    :root {
+      --bg1: #0d1117;
+      --bg2: #1c1f26;
+      --accent1: #00e6ff;
+      --accent2: #ffcc00;
+      --accent3: #ff6ec7;
+      --card: #20242b;
+      --text: #f5f5f5;
+      --muted: #bbb;
+      --radius: 20px;
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: "Nunito", "Baloo 2", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      color:var(--text);
-      background: var(--space-deep);
-      overflow-x:hidden;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Baloo 2', sans-serif;
+      background: radial-gradient(circle at top, var(--bg1), var(--bg2));
+      color: var(--text);
+      overflow-x: hidden;
     }
 
-    /* Space background canvas (simple stars) */
-    .space {
-      position:fixed; inset:0; z-index:0; pointer-events:none;
-      background:
-        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.95), transparent 30%),
-        radial-gradient(1px 1px at 80% 60%, rgba(255,255,255,0.85), transparent 30%),
-        radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.9), transparent 30%),
-        transparent;
-      background-size: cover;
-      animation: deepGlow 12s linear infinite;
-      opacity:0.9;
-    }
-    @keyframes deepGlow{
-      0%{filter:brightness(1)}
-      50%{filter:brightness(1.08)}
-      100%{filter:brightness(1)}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
     }
 
-    /* floating planets (SVG groups) */
-    .orbit-wrap{position:fixed; inset:0; z-index:0; pointer-events:none}
-    .planet{
-      position:absolute;
-      will-change:transform,opacity;
-      transform-origin:center;
-      filter:drop-shadow(0 12px 30px rgba(0,0,0,0.6));
-      opacity:0.95;
-    }
-    .p1{left:6%; top:18%; width:120px; animation:float1 10s ease-in-out infinite}
-    .p2{right:8%; top:10%; width:180px; animation:float2 14s ease-in-out infinite}
-    .p3{left:18%; bottom:8%; width:140px; animation:float3 12s ease-in-out infinite}
-    .p4{right:22%; bottom:18%; width:100px; animation:float4 9s ease-in-out infinite}
-    @keyframes float1{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(8deg)}100%{transform:translateY(0) rotate(0deg)}}
-    @keyframes float2{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-20px) rotate(-12deg)}100%{transform:translateY(0) rotate(0deg)}}
-    @keyframes float3{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(6deg)}100%{transform:translateY(0) rotate(0deg)}}
-    @keyframes float4{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-10px) rotate(-6deg)}100%{transform:translateY(0) rotate(0deg)}}
-
-    /* main container */
-    .wrap{
-      position:relative;
-      z-index:10;
-      max-width:1200px;
-      margin:36px auto;
-      padding:28px;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
-    header{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      justify-content:space-between;
-      margin-bottom:18px;
+    .logo-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--accent1), var(--accent3));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
 
-    /* logo with subtle 3D */
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-    .logo-box{
-      width:92px;height:92px;border-radius:22px;
-      background:linear-gradient(135deg,var(--accent2),var(--accent1));
-      display:flex;align-items:center;justify-content:center;
-      font-weight:800;font-family:"Baloo 2";font-size:34px;color:white;
-      box-shadow: 0 15px 40px rgba(124,92,255,0.25), inset 0 -6px 24px rgba(0,0,0,0.15);
-      transform:translateZ(12px);
-    }
-    .brand-text h1{margin:0;font-size:22px;letter-spacing:0.4px}
-    .brand-text p{margin:2px 0 0;color:var(--muted);font-size:13px}
-
-    /* header controls */
-    .controls{display:flex;gap:10px;align-items:center}
-    .icon-btn{
-      background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.04);
-      padding:10px;border-radius:12px;color:var(--text);cursor:pointer;
-      display:inline-flex;align-items:center;gap:8px;font-weight:700;
-      box-shadow:0 6px 18px rgba(0,0,0,0.35);
-      transition:transform .18s ease, box-shadow .18s;
-    }
-    .icon-btn:hover{transform:translateY(-6px); box-shadow:0 22px 40px rgba(0,0,0,0.45)}
-    .lang-btn{background:linear-gradient(90deg,var(--accent3),#fff); padding:8px 12px;border-radius:10px;color:#072; font-weight:700; border:none; cursor:pointer}
-
-    /* hero area */
-    .hero{
-      display:grid; grid-template-columns: 1fr 380px; gap:20px; align-items:start;
+    h1 {
+      font-size: 26px;
+      text-shadow: 0 0 10px var(--accent1);
     }
 
-    /* main card with depth */
-    .main-card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-      border-radius:18px; padding:26px; box-shadow: 0 20px 50px rgba(0,0,0,0.45);
-      transform-style:preserve-3d; perspective:1000px;
-      border:1px solid rgba(255,255,255,0.03);
-    }
-    .lead{
-      font-family:"Baloo 2", sans-serif; font-size:20px; margin:0 0 14px; color:var(--text);
-      line-height:1.3;
-    }
-    .sub-lead{color:var(--muted); margin-bottom:14px}
-
-    /* 3D game cards */
-    .game-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px}
-    .game{
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-      border-radius:14px; padding:12px; text-align:center; color:var(--text);
-      transform:translateZ(0); transition:transform .35s cubic-bezier(.2,.9,.2,1), box-shadow .35s;
-      border:1px solid rgba(255,255,255,0.03);
-      cursor:pointer;
-    }
-    .game:hover{
-      transform:translateY(-14px) translateZ(18px) rotateX(6deg);
-      box-shadow: 0 30px 60px rgba(15,20,40,0.6), 0 6px 20px rgba(124,92,255,0.12);
-    }
-    .game .g-icon{
-      width:70px;height:70px;border-radius:14px;margin:0 auto 8px;
-      display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;
-      color:white; box-shadow: inset 0 -6px 12px rgba(0,0,0,0.18);
-      background:linear-gradient(135deg,var(--accent1),var(--accent4));
-    }
-    .game h4{margin:6px 0 0;font-size:14px; font-weight:800}
-    .game p{margin:6px 0 0; color:var(--muted); font-size:12px}
-
-    /* aside card */
-    .side-card{
-      position:relative; overflow:hidden;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-      border-radius:16px; padding:18px; border:1px solid rgba(255,255,255,0.03);
-      box-shadow:0 12px 30px rgba(0,0,0,0.45);
+    .lang-switch button {
+      background: linear-gradient(135deg, var(--accent2), var(--accent3));
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 6px 12px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
     }
 
-    .links a{display:inline-block; color:var(--text); text-decoration:none; margin:8px 0; font-weight:700}
-    .links a.small{font-weight:400;color:var(--muted);display:block;margin:2px 0 10px}
-
-    /* glowing CTA */
-    .cta{
-      display:inline-block;padding:12px 18px;border-radius:14px;font-weight:800;
-      background:linear-gradient(90deg,var(--accent2),var(--accent1));
-      color:white;text-decoration:none;box-shadow:0 12px 40px rgba(124,92,255,0.24);
-      transition:transform .18s ease, box-shadow .18s;
-    }
-    .cta:hover{transform:translateY(-6px); box-shadow:0 30px 80px rgba(124,92,255,0.32)}
-
-    /* mission / vision tiles with subtle 3D */
-    .mv{
-      display:flex; gap:12px; margin-top:16px;
-    }
-    .mv .tile{
-      flex:1; padding:14px; border-radius:12px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid rgba(255,255,255,0.03);
-      transform:translateZ(0); transition:transform .25s ease, box-shadow .25s;
-    }
-    .mv .tile:hover{transform:translateY(-8px) translateZ(12px); box-shadow:0 20px 40px rgba(0,0,0,0.45)}
-    .tile h3{margin:0 0 6px;color:var(--accent3)}
-    .tile p{margin:0;color:var(--muted);font-size:13px}
-
-    /* footer */
-    footer{
-      margin-top:26px; padding:16px; border-radius:12px;
-      display:flex; justify-content:space-between; align-items:center;
-      color:var(--muted); font-size:13px; border-top:1px solid rgba(255,255,255,0.03);
+    .lang-switch button:hover {
+      transform: scale(1.1);
     }
 
-    /* small responsive */
-    @media(max-width:980px){
-      .hero{grid-template-columns:1fr; gap:16px}
-      .game-grid{grid-template-columns:repeat(2,1fr)}
-      .logo-box{width:76px;height:76px;font-size:30px}
-    }
-    @media(max-width:600px){
-      .game-grid{grid-template-columns:repeat(1,1fr)}
-      .logo-box{width:64px;height:64px;font-size:24px}
-      .controls{gap:6px}
-      .brand-text h1{font-size:18px}
+    .hero {
+      text-align: center;
+      padding: 80px 20px 40px;
+      animation: fadeIn 1s ease-out;
     }
 
-    /* prefers reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      .planet, .space, .game, .mv .tile, .main-card, .icon-btn, .cta { animation: none !important; transition: none !important; transform: none !important }
+    .hero h2 {
+      font-size: 36px;
+      color: var(--accent1);
+      text-shadow: 0 0 12px var(--accent1);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      margin-top: 10px;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    .buttons {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .btn {
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      padding: 12px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.25s;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    }
+
+    .card h3 {
+      color: var(--accent2);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 50px;
+    }
+
+    footer a { color: var(--accent1); text-decoration: none; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body>
-  <!-- background decorative elements -->
-  <div class="space" aria-hidden="true"></div>
+  <header>
+    <div class="logo">
+      <div class="logo-icon">FG</div>
+      <h1>Felkant Games</h1>
+    </div>
 
-  <div class="orbit-wrap" aria-hidden="true">
-    <!-- simple inline SVG planets -->
-    <svg class="planet p1" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <radialGradient id="g1"><stop offset="0%" stop-color="#fff7f3"/><stop offset="70%" stop-color="#ffd7d0"/></radialGradient>
-      </defs>
-      <circle cx="100" cy="100" r="60" fill="url(#g1)"/>
-      <g transform="rotate(20 100 100)" opacity="0.18">
-        <rect x="20" y="95" width="160" height="12" rx="6" fill="#ff6f61"/>
-      </g>
-    </svg>
+    <div class="lang-switch">
+      <button onclick="setLang('tr')">TR</button>
+      <button onclick="setLang('en')">EN</button>
+    </div>
+  </header>
 
-    <svg class="planet p2" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
-      <defs><radialGradient id="g2"><stop offset="0%" stop-color="#eef2ff"/><stop offset="70%" stop-color="#c8b8ff"/></radialGradient></defs>
-      <circle cx="100" cy="100" r="70" fill="url(#g2)"/>
-      <circle cx="144" cy="56" r="10" fill="#ffd93d" opacity="0.95"/>
-    </svg>
-
-    <svg class="planet p3" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
-      <defs><radialGradient id="g3"><stop offset="0%" stop-color="#e8fff0"/><stop offset="70%" stop-color="#9ee9b3"/></radialGradient></defs>
-      <circle cx="100" cy="100" r="60" fill="url(#g3)"/>
-    </svg>
-
-    <svg class="planet p4" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
-      <defs><radialGradient id="g4"><stop offset="0%" stop-color="#fffbe6"/><stop offset="70%" stop-color="#fff1a8"/></radialGradient></defs>
-      <circle cx="100" cy="100" r="48" fill="url(#g4)"/>
-    </svg>
+  <div class="hero">
+    <h2 id="heroTitle">Fun and Bright Mobile Games</h2>
+    <p id="heroText">
+      Felkant Games develops creative and joyful mobile games for everyone — designed to entertain, inspire and make you smile.
+    </p>
+    <div class="buttons">
+      <a class="btn" href="https://play.google.com/store/apps/dev?id=5796880010136939991" target="_blank">Google Play</a>
+      <a class="btn" href="https://youtube.com/@felkantgames" target="_blank">YouTube</a>
+      <a class="btn" href="https://www.instagram.com/felkantgames" target="_blank">Instagram</a>
+      <a class="btn" href="mailto:felkantgames@gmail.com">E-Mail</a>
+    </div>
   </div>
 
-  <!-- content -->
-  <div class="wrap" role="main">
-    <header>
-      <div style="display:flex;align-items:center;gap:14px">
-        <div class="logo">
-          <div class="logo-box">FG</div>
-          <div class="brand-text">
-            <h1>Felkant Games</h1>
-            <p>Animated, colorful casual games</p>
-          </div>
-        </div>
-      </div>
+  <section>
+    <div class="card">
+      <h3 id="missionTitle">Mission</h3>
+      <p id="missionText">
+        To design colorful, high-quality, and accessible games that spark imagination and happiness for players of all ages.
+      </p>
+    </div>
 
-      <div class="controls">
-        <button class="icon-btn" onclick="setLang('tr')" title="Türkçe">TR</button>
-        <button class="icon-btn" onclick="setLang('en')" title="English">EN</button>
-        <a class="icon-btn" href="mailto:felkantgames@gmail.com" title="Contact">Contact</a>
-      </div>
-    </header>
+    <div class="card">
+      <h3 id="visionTitle">Vision</h3>
+      <p id="visionText">
+        To become a globally recognized indie studio known for joyful creativity and games that connect people through fun.
+      </p>
+    </div>
 
-    <section class="hero">
-      <article class="main-card" aria-labelledby="hero-title">
-        <h2 id="hero-title" class="lead">Felkant Games — Playful & Animated</h2>
-        <div id="hero-sub" class="sub-lead">Colorful, 3D-feel mini-games for kids and families. Instant fun — tap and play!</div>
+    <div class="card">
+      <h3 id="designTitle">Design</h3>
+      <p id="designText">
+        We believe in bright colors, soft 3D visuals, and positive vibes — our games are built for smiles, not stress.
+      </p>
+    </div>
+  </section>
 
-        <div style="display:flex;gap:12px;align-items:center;margin-top:10px">
-          <a class="cta" href="https://play.google.com/store/apps/dev?id=5796880010136939991" target="_blank">Visit our Google Play</a>
-          <a class="icon-btn" href="https://youtube.com/@felkantgames" target="_blank">YouTube</a>
-          <a class="icon-btn" href="https://www.instagram.com/felkantgames" target="_blank">Instagram</a>
-        </div>
-
-        <div class="game-grid" aria-hidden="false" style="margin-top:18px">
-          <div class="game" role="button" tabindex="0">
-            <div class="g-icon" style="background:linear-gradient(135deg,var(--accent1),var(--accent4));">TB</div>
-            <h4>Tower Breakerz</h4>
-            <p>Smash blocks — physics fun</p>
-          </div>
-          <div class="game" role="button" tabindex="0">
-            <div class="g-icon" style="background:linear-gradient(135deg,var(--accent2),var(--accent3));">GM</div>
-            <h4>Galaxy Match</h4>
-            <p>Match planets & combos</p>
-          </div>
-          <div class="game" role="button" tabindex="0">
-            <div class="g-icon" style="background:linear-gradient(135deg,#6BCB77,#FFD93D);">TT</div>
-            <h4>Tic Tac Toe</h4>
-            <p>Classic with a twist</p>
-          </div>
-          <div class="game" role="button" tabindex="0">
-            <div class="g-icon" style="background:linear-gradient(135deg,#FF6F61,#7C5CFF);">PR</div>
-            <h4>Puzzle Chess</h4>
-            <p>Puzzle meets chess</p>
-          </div>
-          <div class="game" role="button" tabindex="0">
-            <div class="g-icon" style="background:linear-gradient(135deg,#FFD93D,#FF6F61);">CP</div>
-            <h4>Car Parking</h4>
-            <p>Park & win</p>
-          </div>
-          <div class="game" role="button" tabindex="0">
-            <div class="g-icon" style="background:linear-gradient(135deg,#7C5CFF,#6BCB77);">NB</div>
-            <h4>Nebula Bubble</h4>
-            <p>Bubble popping adventure</p>
-          </div>
-        </div>
-
-        <div class="mv" aria-hidden="false" style="margin-top:18px">
-          <div class="tile">
-            <h3 id="m-title">Mission</h3>
-            <p id="m-text">Create joyful, accessible and colorful mobile games that spark curiosity and smiles for players of all ages.</p>
-          </div>
-          <div class="tile">
-            <h3 id="v-title">Vision</h3>
-            <p id="v-text">Be a beloved indie studio delivering playful, high-quality casual experiences worldwide.</p>
-          </div>
-        </div>
-      </article>
-
-      <aside class="side-card" aria-labelledby="side-title">
-        <h3 id="side-title" style="margin-top:0">Quick Links</h3>
-        <nav class="links" aria-label="Important links">
-          <a href="mailto:felkantgames@gmail.com">felkantgames@gmail.com</a>
-          <div class="links-list small" style="margin-top:10px">
-            <a class="small" href="https://play.google.com/store/apps/dev?id=5796880010136939991" target="_blank">Google Play • Developer page</a>
-            <a class="small" href="https://youtube.com/@felkantgames" target="_blank">YouTube channel</a>
-            <a class="small" href="https://www.instagram.com/felkantgames" target="_blank">Instagram</a>
-          </div>
-        </nav>
-
-        <hr style="border:none;border-top:1px dashed rgba(255,255,255,0.04);margin:12px 0">
-
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <a class="cta" href="https://github.com/felkantgames" target="_blank">View on GitHub</a>
-          <a class="icon-btn" href="#" onclick="scrollToContact(event)">Request a demo / press kit</a>
-        </div>
-      </aside>
-    </section>
-
-    <footer>
-      <div>© <span id="year">2025</span> Felkant Games — All rights reserved.</div>
-      <div style="display:flex;gap:10px">
-        <a class="small" href="/privacy.html" style="color:var(--muted); text-decoration:none">Privacy</a>
-        <a class="small" href="/terms.html" style="color:var(--muted); text-decoration:none">Terms</a>
-      </div>
-    </footer>
-  </div>
+  <footer id="footerText">
+    © 2025 Felkant Games — All rights reserved. | 
+    <a href="https://github.com/felkantgames" target="_blank">GitHub</a>
+  </footer>
 
   <script>
-    // Bilingual text
-    const i18n = {
-      en:{
-        heroTitle: "Felkant Games — Playful & Animated",
-        heroSub: "Colorful, 3D-feel mini-games for kids and families. Instant fun — tap and play!",
-        mission: "Create joyful, accessible and colorful mobile games that spark curiosity and smiles for players of all ages.",
-        vision: "Be a beloved indie studio delivering playful, high-quality casual experiences worldwide.",
-        contactLabel: "Contact & Links"
+    const text = {
+      tr: {
+        heroTitle: "Eğlenceli ve Parlak Mobil Oyunlar",
+        heroText: "Felkant Games, her yaştan oyuncu için eğlenceli, yaratıcı ve gülümseten mobil oyunlar geliştirir.",
+        missionTitle: "Misyon",
+        missionText: "Her yaştan oyuncuya hayal gücü ve mutluluk getiren, renkli ve kaliteli oyunlar tasarlamak.",
+        visionTitle: "Vizyon",
+        visionText: "Yaratıcı, eğlenceli ve herkesi birleştiren oyunlarıyla tanınan bir bağımsız oyun stüdyosu olmak.",
+        designTitle: "Tasarım",
+        designText: "Canlı renkler, yumuşak 3D efektler ve pozitif enerjiyle dolu bir deneyim sunuyoruz.",
+        footerText: "© 2025 Felkant Games — Tüm hakları saklıdır."
       },
-      tr:{
-        heroTitle: "Felkant Games — Neşeli & Animasyonlu",
-        heroSub: "Renkli, 3D hissi veren mini oyunlar — çocuklar ve aileler için hemen oynanır eğlence!",
-        mission: "Her yaştan oyuncuya merak ve gülümseme getiren, erişilebilir ve renkli mobil oyunlar yaratmak.",
-        vision: "Dünya çapında sevilen, eğlenceli ve yüksek kaliteli mobil deneyimler sunan bir bağımsız stüdyo olmak.",
-        contactLabel: "İletişim ve Bağlantılar"
+      en: {
+        heroTitle: "Fun and Bright Mobile Games",
+        heroText: "Felkant Games develops creative and joyful mobile games for everyone — designed to entertain, inspire and make you smile.",
+        missionTitle: "Mission",
+        missionText: "To design colorful, high-quality, and accessible games that spark imagination and happiness for players of all ages.",
+        visionTitle: "Vision",
+        visionText: "To become a globally recognized indie studio known for joyful creativity and games that connect people through fun.",
+        designTitle: "Design",
+        designText: "We believe in bright colors, soft 3D visuals, and positive vibes — our games are built for smiles, not stress.",
+        footerText: "© 2025 Felkant Games — All rights reserved."
       }
     };
 
-    function setLang(l){
-      const t = i18n[l] || i18n.en;
-      document.getElementById('hero-title').textContent = t.heroTitle;
-      document.getElementById('hero-sub').textContent = t.heroSub || "";
-      document.getElementById('m-text').textContent = t.mission;
-      document.getElementById('v-text').textContent = t.vision;
-      // small accessible tweak
-      document.title = (l==='tr' ? 'Felkant Games — Resmi' : 'Felkant Games — Official');
-    }
-
-    // default language detect
-    (function(){
-      const userLang = navigator.language || navigator.userLanguage || 'en';
-      setLang(userLang.startsWith('tr') ? 'tr' : 'en');
-      // current year
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
-
-    function scrollToContact(e){
-      e && e.preventDefault();
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    function setLang(lang) {
+      for (const id in text[lang]) {
+        document.getElementById(id).textContent = text[lang][id];
+      }
     }
   </script>
 </body>
