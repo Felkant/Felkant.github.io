@@ -1,263 +1,213 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Felkant Games — Official Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Felkant Games</title>
   <style>
-    :root {
-      --bg1: #0d1117;
-      --bg2: #1c1f26;
-      --accent1: #00e6ff;
-      --accent2: #ffcc00;
-      --accent3: #ff6ec7;
-      --card: #20242b;
-      --text: #f5f5f5;
-      --muted: #bbb;
-      --radius: 20px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Baloo 2', sans-serif;
-      background: radial-gradient(circle at top, var(--bg1), var(--bg2));
-      color: var(--text);
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #0f172a, #1e293b);
+      color: #f8fafc;
       overflow-x: hidden;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: rgba(255,255,255,0.04);
-      backdrop-filter: blur(12px);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .logo-icon {
-      width: 70px;
-      height: 70px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, var(--accent1), var(--accent3));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      font-weight: 700;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
-
-    h1 {
-      font-size: 26px;
-      text-shadow: 0 0 10px var(--accent1);
-    }
-
-    .lang-switch button {
-      background: linear-gradient(135deg, var(--accent2), var(--accent3));
-      color: #fff;
-      border: none;
-      border-radius: 12px;
-      padding: 6px 12px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
-    }
-
-    .lang-switch button:hover {
-      transform: scale(1.1);
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 20px 40px;
-      animation: fadeIn 1s ease-out;
-    }
-
-    .hero h2 {
-      font-size: 36px;
-      color: var(--accent1);
-      text-shadow: 0 0 12px var(--accent1);
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: var(--muted);
-      margin-top: 10px;
-      max-width: 600px;
-      margin-inline: auto;
-    }
-
-    .buttons {
-      margin-top: 28px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-    }
-
-    .btn {
-      text-decoration: none;
+      background: linear-gradient(90deg, #4f46e5, #ec4899);
       color: white;
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
-      padding: 12px 22px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: 0.25s;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.3);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 2.2em;
+      font-weight: 800;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      text-shadow: 0 0 15px rgba(255,255,255,0.3);
     }
 
     section {
+      padding: 40px 20px;
+      text-align: center;
       max-width: 1100px;
-      margin: 40px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      padding: 0 20px;
+      margin: auto;
     }
 
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-      transition: 0.3s;
+    h2 {
+      font-size: 2em;
+      color: #f9fafb;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.2);
     }
 
-    .card:hover {
+    p {
+      font-size: 1.1em;
+      color: #e5e7eb;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 10px auto;
+    }
+
+    .social {
+      margin: 20px 0;
+    }
+
+    .social a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(45deg, #ff7eb3, #ff758c);
+      transition: all 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .social a.instagram {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+    }
+
+    .social a.youtube {
+      background: linear-gradient(45deg, #ff0000, #cc0000);
+    }
+
+    .social a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255,255,255,0.6);
+    }
+
+    .mission-vision {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .mission-vision div {
+      flex: 1 1 400px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transition: all 0.3s;
+    }
+
+    .mission-vision div:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
     }
 
-    .card h3 {
-      color: var(--accent2);
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .game {
+      background: linear-gradient(135deg, #2563eb, #9333ea);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: all 0.3s;
+    }
+
+    .game:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .game h3 {
+      color: #fff;
+      font-size: 1.3em;
       margin-bottom: 10px;
     }
 
-    .card p {
-      color: var(--muted);
-      line-height: 1.5;
+    .game a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #22c55e, #3b82f6);
+      border-radius: 30px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .game a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 12px rgba(255,255,255,0.4);
     }
 
     footer {
+      background: rgba(255,255,255,0.05);
       text-align: center;
       padding: 20px;
-      font-size: 14px;
-      color: var(--muted);
-      border-top: 1px solid rgba(255,255,255,0.1);
-      margin-top: 50px;
+      font-size: 0.9em;
+      color: #9ca3af;
     }
 
-    footer a { color: var(--accent1); text-decoration: none; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.4em;
+      }
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="logo">
-      <div class="logo-icon">FG</div>
-      <h1>Felkant Games</h1>
-    </div>
 
-    <div class="lang-switch">
-      <button onclick="setLang('tr')">TR</button>
-      <button onclick="setLang('en')">EN</button>
-    </div>
-  </header>
-
-  <div class="hero">
-    <h2 id="heroTitle">Fun and Bright Mobile Games</h2>
-    <p id="heroText">
-      Felkant Games develops creative and joyful mobile games for everyone — designed to entertain, inspire and make you smile.
-    </p>
-    <div class="buttons">
-      <a class="btn" href="https://play.google.com/store/apps/dev?id=5796880010136939991" target="_blank">Google Play</a>
-      <a class="btn" href="https://youtube.com/@felkantgames" target="_blank">YouTube</a>
-      <a class="btn" href="https://www.instagram.com/felkantgames" target="_blank">Instagram</a>
-      <a class="btn" href="mailto:felkantgames@gmail.com">E-Mail</a>
-    </div>
-  </div>
+  <header>🎯 Oyna. Gülümse. Hayal Et. <br> Felkant Games Seninle!</header>
 
   <section>
-    <div class="card">
-      <h3 id="missionTitle">Mission</h3>
-      <p id="missionText">
-        To design colorful, high-quality, and accessible games that spark imagination and happiness for players of all ages.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 id="visionTitle">Vision</h3>
-      <p id="visionText">
-        To become a globally recognized indie studio known for joyful creativity and games that connect people through fun.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 id="designTitle">Design</h3>
-      <p id="designText">
-        We believe in bright colors, soft 3D visuals, and positive vibes — our games are built for smiles, not stress.
-      </p>
+    <div class="social">
+      <a href="https://www.instagram.com/felkantgames" target="_blank" class="instagram">Instagram</a>
+      <a href="https://youtube.com/@felkantgames" target="_blank" class="youtube">YouTube</a>
     </div>
   </section>
 
-  <footer id="footerText">
-    © 2025 Felkant Games — All rights reserved. | 
-    <a href="https://github.com/felkantgames" target="_blank">GitHub</a>
+  <section id="mission">
+    <h2>🌟 Misyon</h2>
+    <div class="mission-vision">
+      <div>
+        <p>Misyonumuz; hayal gücünü ateşleyen, neşe yayan ve oyuncuları bir araya getiren renkli, kaliteli ve herkes için erişilebilir mobil oyunlar tasarlamak.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision">
+    <h2>🚀 Vizyon</h2>
+    <div class="mission-vision">
+      <div>
+        <p>Yaratıcılık, teknoloji ve duyguyu birleştirerek oyun dünyasının geleceğini şekillendiren global bir stüdyo olmak.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="games">
+    <h2>🎮 Oyunlarımız / Our Games</h2>
+    <div class="games">
+      <div class="game"><h3>Tower Breakerz</h3><a href="https://play.google.com/store/apps/details?id=com.towerbreakerz.felkantgames" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Puzzle Chess</h3><a href="https://play.google.com/store/apps/details?id=com.puzzlechess.felkantgames" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Tic Tac Toe</h3><a href="https://play.google.com/store/apps/details?id=com.felkantgames.tictactoe" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Man Rescue</h3><a href="https://play.google.com/store/apps/details?id=com.manrescue.felkantgames" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Car Parking</h3><a href="https://play.google.com/store/apps/details?id=com.carparking.felkantgames" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Car Destroyer</h3><a href="https://play.google.com/store/apps/details?id=com.cardestroyer.felkantgames" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Shape Quest</h3><a href="https://play.google.com/store/apps/details?id=com.felkantgames.shapequest" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Food Cutter</h3><a href="https://play.google.com/store/apps/details?id=com.foodcutter.felkantgames.com" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Happy Bunny</h3><a href="https://play.google.com/store/apps/details?id=com.happybunny.felkant" target="_blank">Play Store</a></div>
+      <div class="game"><h3>The Royal Chess</h3><a href="https://play.google.com/store/apps/details?id=com.TheRoyalChess" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Sudoku World</h3><a href="https://play.google.com/store/apps/details?id=com.SUDOKUWORLD.FELKANTGAMES" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Nebula Bubble Adventure</h3><a href="https://play.google.com/store/apps/details?id=com.felkantgames.nebulabubbleadventure" target="_blank">Play Store</a></div>
+      <div class="game"><h3>Galaxy Match</h3><a href="https://play.google.com/store/apps/details?id=com.galaxymatch.felkantgames" target="_blank">Play Store</a></div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Felkant Games | felkantgames@gmail.com
   </footer>
 
-  <script>
-    const text = {
-      tr: {
-        heroTitle: "Eğlenceli ve Parlak Mobil Oyunlar",
-        heroText: "Felkant Games, her yaştan oyuncu için eğlenceli, yaratıcı ve gülümseten mobil oyunlar geliştirir.",
-        missionTitle: "Misyon",
-        missionText: "Her yaştan oyuncuya hayal gücü ve mutluluk getiren, renkli ve kaliteli oyunlar tasarlamak.",
-        visionTitle: "Vizyon",
-        visionText: "Yaratıcı, eğlenceli ve herkesi birleştiren oyunlarıyla tanınan bir bağımsız oyun stüdyosu olmak.",
-        designTitle: "Tasarım",
-        designText: "Canlı renkler, yumuşak 3D efektler ve pozitif enerjiyle dolu bir deneyim sunuyoruz.",
-        footerText: "© 2025 Felkant Games — Tüm hakları saklıdır."
-      },
-      en: {
-        heroTitle: "Fun and Bright Mobile Games",
-        heroText: "Felkant Games develops creative and joyful mobile games for everyone — designed to entertain, inspire and make you smile.",
-        missionTitle: "Mission",
-        missionText: "To design colorful, high-quality, and accessible games that spark imagination and happiness for players of all ages.",
-        visionTitle: "Vision",
-        visionText: "To become a globally recognized indie studio known for joyful creativity and games that connect people through fun.",
-        designTitle: "Design",
-        designText: "We believe in bright colors, soft 3D visuals, and positive vibes — our games are built for smiles, not stress.",
-        footerText: "© 2025 Felkant Games — All rights reserved."
-      }
-    };
-
-    function setLang(lang) {
-      for (const id in text[lang]) {
-        document.getElementById(id).textContent = text[lang][id];
-      }
-    }
-  </script>
 </body>
 </html>
