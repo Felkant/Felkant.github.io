@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
     header {
       background: linear-gradient(90deg, #6366f1, #ec4899);
       text-align: center;
-      padding: 30px 10px;
+      padding: 20px 10px;
       font-size: 2em;
       font-weight: 700;
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
@@ -30,25 +30,13 @@
       margin: auto;
     }
 
-    h1 {
-      font-size: 1.9em;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 1.7em;
-      color: #60a5fa;
-      margin-top: 40px;
-    }
-
-    p {
-      line-height: 1.8;
-      font-size: 1.1em;
-      color: #e2e8f0;
-    }
+    h1 { font-size: 1.9em; margin-bottom: 10px; }
+    h2 { font-size: 1.7em; color: #60a5fa; margin-top: 40px; }
+    p { line-height: 1.8; font-size: 1.1em; color: #e2e8f0; }
 
     .social {
-      margin: 30px 0;
+      text-align: center;
+      margin: 20px 0 10px;
     }
 
     .social a {
@@ -68,10 +56,7 @@
     .playstore { background: linear-gradient(45deg, #00c853, #009624); }
     .gmail { background: linear-gradient(45deg, #d93025, #ea4335); }
 
-    .social a:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px rgba(255,255,255,0.6);
-    }
+    .social a:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(255,255,255,0.6); }
 
     .games {
       display: grid;
@@ -88,16 +73,8 @@
       transition: 0.3s;
     }
 
-    .game-card:hover {
-      transform: translateY(-5px);
-      background: rgba(255,255,255,0.1);
-    }
-
-    .game-card h3 {
-      color: #f9fafb;
-      margin-bottom: 10px;
-    }
-
+    .game-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.1); }
+    .game-card h3 { color: #f9fafb; margin-bottom: 10px; }
     .game-card a {
       display: inline-block;
       margin-top: 10px;
@@ -109,60 +86,63 @@
       text-decoration: none;
       transition: 0.3s;
     }
+    .game-card a:hover { transform: scale(1.1); box-shadow: 0 0 15px rgba(255,255,255,0.6); }
 
-    .game-card a:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 15px rgba(255,255,255,0.6);
-    }
-
-    .language-switch {
-      margin-top: 30px;
-    }
-
+    .language-switch { margin-top: 10px; text-align: center; }
     button {
       background: #3b82f6;
       color: white;
       border: none;
       border-radius: 25px;
-      padding: 10px 20px;
+      padding: 8px 18px;
       cursor: pointer;
       font-weight: 600;
       transition: 0.3s;
+      margin: 0 5px;
     }
+    button:hover { background: #2563eb; }
 
-    button:hover {
-      background: #2563eb;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9em;
-      background: #0f172a;
-      color: #94a3b8;
-    }
+    footer { text-align: center; padding: 30px; font-size: 0.9em; background: #0f172a; color: #94a3b8; }
   </style>
 </head>
 <body>
   <header>🎮 Felkant Games</header>
 
+  <!-- Sosyal Medya -->
+  <div class="social">
+    <a href="https://play.google.com/store/apps/dev?id=5796880010136939991" class="playstore">Play Store</a>
+    <a href="https://www.youtube.com/@felkantgames" class="youtube">YouTube</a>
+    <a href="https://www.instagram.com/felkantgames" class="instagram">Instagram</a>
+    <a href="mailto:felkantgames@gmail.com" class="gmail">Gmail</a>
+  </div>
+
+  <!-- Dil Butonları -->
+  <div class="language-switch">
+    <button onclick="switchLang('en')">🇬🇧 English</button>
+    <button onclick="switchLang('tr')">🇹🇷 Türkçe</button>
+  </div>
+
+  <!-- Hero -->
   <section id="hero">
-    <h1>Oyna. Gülümse. Hayal Et. Felkant Games Seninle!</h1>
-    <p>Hayal gücünü gerçeğe dönüştüren, eğlenceli ve renkli oyunlar stüdyosu.</p>
+    <h1>Play. Smile. Imagine. Felkant Games is with you!</h1>
+    <p>A colorful and fun mobile game studio that turns imagination into joy.</p>
   </section>
 
+  <!-- Misyon -->
   <section id="mission">
-    <h2>🌟 Misyon</h2>
-    <p>Misyonumuz; hayal gücünü ateşleyen, neşe yayan ve oyuncuları bir araya getiren renkli, kaliteli ve herkes için erişilebilir mobil oyunlar tasarlamak.</p>
+    <h2>🌟 Mission</h2>
+    <p>Our mission is to design colorful, high-quality, and accessible mobile games that spark imagination, spread joy, and bring players together.</p>
   </section>
 
+  <!-- Vizyon -->
   <section id="vision">
-    <h2>🚀 Vizyon</h2>
-    <p>Yaratıcılık, teknoloji ve duyguyu birleştirerek oyun dünyasının geleceğini şekillendiren global bir stüdyo olmak.</p>
+    <h2>🚀 Vision</h2>
+    <p>Our vision is to shape the future of gaming by blending creativity, technology, and emotion into every experience.</p>
   </section>
 
+  <!-- Oyunlar -->
   <section id="games">
-    <h2>🎮 Oyunlarımız / Our Games</h2>
+    <h2>🎮 Our Games</h2>
     <div class="games">
       <div class="game-card"><h3>Tower Breakerz</h3><a href="https://play.google.com/store/apps/details?id=com.towerbreakerz.felkantgames">Play Now</a></div>
       <div class="game-card"><h3>Puzzle Chess</h3><a href="https://play.google.com/store/apps/details?id=com.puzzlechess.felkantgames">Play Now</a></div>
@@ -180,39 +160,42 @@
     </div>
   </section>
 
-  <div class="social">
-    <a href="https://play.google.com/store/apps/dev?id=5796880010136939991" class="playstore">Play Store</a>
-    <a href="https://www.youtube.com/@felkantgames" class="youtube">YouTube</a>
-    <a href="https://www.instagram.com/felkantgames" class="instagram">Instagram</a>
-    <a href="mailto:felkantgames@gmail.com" class="gmail">Gmail</a>
-  </div>
-
-  <div class="language-switch">
-    <button onclick="switchLang('tr')">🇹🇷 Türkçe</button>
-    <button onclick="switchLang('en')">🇬🇧 English</button>
-  </div>
-
   <footer>© 2025 Felkant Games. All Rights Reserved.</footer>
 
   <script>
     const content = {
       tr: {
         hero: "Oyna. Gülümse. Hayal Et. Felkant Games Seninle!",
+        heroP: "Hayal gücünü gerçeğe dönüştüren, eğlenceli ve renkli oyunlar stüdyosu.",
+        missionT: "🌟 Misyon",
         mission: "Misyonumuz; hayal gücünü ateşleyen, neşe yayan ve oyuncuları bir araya getiren renkli, kaliteli ve herkes için erişilebilir mobil oyunlar tasarlamak.",
-        vision: "Yaratıcılık, teknoloji ve duyguyu birleştirerek oyun dünyasının geleceğini şekillendiren global bir stüdyo olmak."
+        visionT: "🚀 Vizyon",
+        vision: "Yaratıcılık, teknoloji ve duyguyu birleştirerek oyun dünyasının geleceğini şekillendiren global bir stüdyo olmak.",
+        gamesT: "🎮 Oyunlarımız"
       },
       en: {
         hero: "Play. Smile. Imagine. Felkant Games is with you!",
+        heroP: "A colorful and fun mobile game studio that turns imagination into joy.",
+        missionT: "🌟 Mission",
         mission: "Our mission is to design colorful, high-quality, and accessible mobile games that spark imagination, spread joy, and bring players together.",
-        vision: "Our vision is to shape the future of gaming by blending creativity, technology, and emotion into every experience."
+        visionT: "🚀 Vision",
+        vision: "Our vision is to shape the future of gaming by blending creativity, technology, and emotion into every experience.",
+        gamesT: "🎮 Our Games"
       }
     };
 
     function switchLang(lang) {
       document.querySelector("#hero h1").textContent = content[lang].hero;
+      document.querySelector("#hero p").textContent = content[lang].heroP;
+      document.querySelector("#mission h2").textContent = content[lang].missionT;
       document.querySelector("#mission p").textContent = content[lang].mission;
+      document.querySelector("#vision h2").textContent = content[lang].visionT;
       document.querySelector("#vision p").textContent = content[lang].vision;
+      document.querySelector("#games h2").textContent = content[lang].gamesT;
     }
+
+    // Sayfa başlangıcı İngilizce
+    window.onload = () => switchLang('en');
   </script>
 </body>
 </html>
